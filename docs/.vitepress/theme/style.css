@@ -30,28 +30,28 @@ body {
 /* ===== Hero ===== */
 .hero-section {
   text-align: center;
-  padding: 60px 24px 48px;
+  padding: 80px 24px 56px;
 }
 .hero-section .hero-badge {
   display: inline-block;
-  padding: 4px 16px;
+  padding: 6px 20px;
   border-radius: 20px;
-  font-size: 13px;
+  font-size: 15px;
   background: var(--c-brand-soft);
   color: var(--c-brand);
   border: 1px solid var(--c-brand-border);
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   letter-spacing: 0.05em;
 }
 .hero-section h1 {
-  font-size: 2.6rem;
+  font-size: 3.2rem;
   font-weight: 800;
   color: #1a1a1a;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   letter-spacing: -0.02em;
 }
 .hero-section .hero-subtitle {
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   color: var(--vp-c-text-muted);
 }
 
@@ -72,8 +72,8 @@ body {
   transition: box-shadow 0.2s;
 }
 .kpi-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
-.kpi-card .kpi-value { font-size: 2rem; font-weight: 700; color: var(--c-brand); }
-.kpi-card .kpi-label { font-size: 0.85rem; color: var(--vp-c-text-muted); margin-top: 4px; }
+.kpi-card .kpi-value { font-size: 2.6rem; font-weight: 700; color: var(--c-brand); }
+.kpi-card .kpi-label { font-size: 0.95rem; color: var(--vp-c-text-muted); margin-top: 6px; }
 
 /* ===== Section Headers ===== */
 .section-header {
@@ -85,18 +85,18 @@ body {
   border-bottom: 2px solid var(--c-brand-border);
 }
 .section-header .section-num {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 700;
   color: var(--c-brand);
   background: var(--c-brand-soft);
-  padding: 3px 10px;
+  padding: 4px 14px;
   border-radius: 4px;
   letter-spacing: 0.05em;
 }
 .section-header h2 {
   margin: 0 !important;
   border: none !important;
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   font-weight: 700;
   color: #1a1a1a;
 }
@@ -127,7 +127,7 @@ body {
 }
 .tool-card:hover { box-shadow: 0 2px 16px rgba(0,0,0,0.08); }
 .tool-card .tc-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
-.tool-card .tc-name { font-size: 1.15rem; font-weight: 700; color: #1a1a1a; }
+.tool-card .tc-name { font-size: 1.25rem; font-weight: 700; color: #1a1a1a; }
 .tool-card .tc-rating { font-size: 0.8rem; color: var(--c-brand); margin-left: auto; font-weight: 600; }
 .tool-card .tc-meta { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 12px; }
 .tool-card .tc-meta-item { font-size: 0.8rem; color: var(--vp-c-text-muted); }

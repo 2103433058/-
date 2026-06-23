@@ -356,6 +356,6 @@ title: AI工具使用报告
 ---
 
 <div style="text-align:center;padding:48px 0 24px;color:var(--vp-c-text-muted);font-size:0.85rem;">
-  <p>报告版本 v4.0 · 2026.06.23 · 资金管理部</p>
-  <p style="margin-top:8px;">技术永远在进化，但理解业务 · 善用工具 · 持续学习 —— 才是财务人在 AI 时代的护城河。</p>
+  <p>报告版本 v5.0 · 2026.06.23 · 资金管理部</p>
+  <p style="margin-top:8px;">📄 <a href="/-/发言稿" style="color:var(--c-brand);">下载发言稿</a> &nbsp;|&nbsp; 技术永远在进化，但理解业务 · 善用工具 · 持续学习 —— 才是财务人在 AI 时代的护城河。</p>
 </div>
