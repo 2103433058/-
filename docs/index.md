@@ -4,9 +4,9 @@ title: AI工具使用报告
 ---
 
 <div class="hero-section">
-  <div class="hero-badge">2026 · 资金管理部</div>
+  <div class="hero-badge">2026 · 财务管理中心</div>
   <h1>AI 工具使用报告</h1>
-  <p class="hero-subtitle">人工智能编程工具与模型 · 企业财务场景实践</p>
+  <p class="hero-subtitle" style="margin-top:16px;">AI Coding的使用 · 财务场景的初步实践</p>
 </div>
 
 <div class="kpi-grid">
@@ -32,7 +32,7 @@ title: AI工具使用报告
 
 <div class="section-header" id="tools">
   <span class="section-num">PART 01</span>
-  <h2>AI 工具矩阵</h2>
+  <h2>AI 工具体验</h2>
 </div>
 
 <div class="tool-cards">
@@ -66,7 +66,7 @@ title: AI工具使用报告
     <span class="tc-meta-item">GUI 桌面端</span>
     <span class="tc-meta-item">消耗：高</span>
   </div>
-  <p style="font-size:0.85rem;margin:8px 0;color:var(--vp-c-text-muted);">一键安装 · 零配置上手 · 交互友好。<strong style="color:#1a1a1a;">入门体验最佳</strong>，但接入第三方模型后推理能力下降明显，工作流逻辑不如 Claude Code 严谨。</p>
+  <p style="font-size:0.85rem;margin:8px 0;color:var(--vp-c-text-muted);">一键安装 · 零配置上手 · 交互友好。原装工具配原装模型能力强力，<strong style="color:#1a1a1a;">入门体验最佳</strong>，但接入第三方模型后推理能力下降明显，工作流逻辑不如 Claude Code 严谨。</p>
   <div class="tc-tags">
     <span class="tc-tag good">用户友好</span>
     <span class="tc-tag good">零基础上手</span>
@@ -104,11 +104,11 @@ title: AI工具使用报告
     <span class="tc-meta-item">专业 IDE</span>
     <span class="tc-meta-item">消耗：中</span>
   </div>
-  <p style="font-size:0.85rem;margin:8px 0;color:var(--vp-c-text-muted);">深度集成 IDE · 面向专业开发场景。<strong style="color:#1a1a1a;">不适合非技术岗位</strong>，财务等业务人员使用门槛过高。</p>
+  <p style="font-size:0.85rem;margin:8px 0;color:var(--vp-c-text-muted);">深度集成 IDE · 面向专业开发场景。UI 界面不友好，<strong style="color:#1a1a1a;">不适合非技术岗位</strong>，财务等业务人员使用门槛过高。</p>
   <div class="tc-tags">
     <span class="tc-tag">编程专业</span>
     <span class="tc-tag warn">非技术不友好</span>
-    <span class="tc-tag warn">场景局限</span>
+    <span class="tc-tag warn">UI 体验差</span>
   </div>
 </div>
 
@@ -116,9 +116,22 @@ title: AI工具使用报告
 
 ### 选型结论
 
-<div class="strategy-box">
-  <h4>推荐策略：双轨并行</h4>
-  <p><strong>深度使用者 → Claude Code</strong>（复杂任务、自动化建设）&nbsp;&nbsp;|&nbsp;&nbsp;<strong>团队推广 → Qoderwork</strong>（日常文档、数据处理）</p>
+<div class="decision-table">
+  <div class="dt-row dt-header">
+    <div class="dt-cell">推荐方案</div>
+    <div class="dt-cell">适用对象</div>
+    <div class="dt-cell">核心优势</div>
+  </div>
+  <div class="dt-row">
+    <div class="dt-cell dt-value">Claude Code</div>
+    <div class="dt-cell dt-label">深度使用者</div>
+    <div class="dt-cell dt-reason">复杂任务攻坚 · 自动化流程建设 · 支持国产模型</div>
+  </div>
+  <div class="dt-row">
+    <div class="dt-cell dt-value">Qoderwork</div>
+    <div class="dt-cell dt-label">团队推广</div>
+    <div class="dt-cell dt-reason">开箱即用 · 低门槛 · 模块化覆盖日常办公</div>
+  </div>
 </div>
 
 ---
@@ -170,7 +183,7 @@ title: AI工具使用报告
 
 <div class="model-item">
   <div class="m-name">Qwen 3.7 Max+</div>
-  <div class="m-role">万金油 · 速度快</div>
+  <div class="m-role">适用性强 · 速度快</div>
   <div style="font-size:0.75rem;color:var(--vp-c-text-muted);margin:8px 0;">响应速度</div>
   <div class="m-bar"><div class="m-bar-fill" style="width:93%"></div></div>
   <div style="font-size:0.75rem;color:var(--vp-c-text-muted);margin:4px 0;">综合能力</div>
@@ -206,14 +219,40 @@ title: AI工具使用报告
 
 </div>
 
-### 分层调用策略
+### 分层调用策略与成本考量
 
-<div class="strategy-box">
-  <h4>场景 → 模型 匹配指南</h4>
-  <p><strong>日常默认</strong> → DeepSeek V4 Pro &nbsp;|&nbsp; <strong>关键攻坚</strong> → GLM 5.2 &nbsp;|&nbsp; <strong>编程专项</strong> → Kimi 2.7 &nbsp;|&nbsp; <strong>快速响应</strong> → Qwen 3.7 Max+</p>
+<div class="decision-table">
+  <div class="dt-row dt-header">
+    <div class="dt-cell">场景</div>
+    <div class="dt-cell">推荐模型</div>
+    <div class="dt-cell">说明</div>
+  </div>
+  <div class="dt-row">
+    <div class="dt-cell dt-label">日常默认</div>
+    <div class="dt-cell dt-value">DeepSeek V4 Pro</div>
+    <div class="dt-cell dt-reason">高性价比，覆盖 80% 场景需求</div>
+  </div>
+  <div class="dt-row">
+    <div class="dt-cell dt-label">关键攻坚</div>
+    <div class="dt-cell dt-value">GLM 5.2</div>
+    <div class="dt-cell dt-reason">国产最强，复杂任务最优解</div>
+  </div>
+  <div class="dt-row">
+    <div class="dt-cell dt-label">编程专项</div>
+    <div class="dt-cell dt-value">Kimi 2.7</div>
+    <div class="dt-cell dt-reason">代码能力突出，实际业务场景效果好</div>
+  </div>
+  <div class="dt-row">
+    <div class="dt-cell dt-label">轻量响应</div>
+    <div class="dt-cell dt-value">Qwen 3.7 Max+</div>
+    <div class="dt-cell dt-reason">响应快，适合短平快任务</div>
+  </div>
+  <div class="dt-row">
+    <div class="dt-cell dt-label" style="color:#1a1a1a;font-weight:800;">成本提醒</div>
+    <div class="dt-cell dt-value" style="color:#1a1a1a;">速度 · 质量 · Token</div>
+    <div class="dt-cell dt-reason">模型评估须综合三维度，单一追求性能将产生不可忽视的隐性成本</div>
+  </div>
 </div>
-
-> **隐性成本提醒**：模型评估需综合 **速度 · 质量 · Token 消耗** 三个维度，单一追求性能将导致不可忽视的隐性成本。
 
 ---
 
@@ -227,24 +266,24 @@ title: AI工具使用报告
 <details class="sc-card">
   <summary class="sc-summary">
     <div class="sc-num">场景 01 · 已在执行</div>
-    <div class="sc-title">资金周报 · 设计与编制</div>
-    <div class="sc-subtitle">多银行数据分散 · 格式不统一 · 手工汇总 2-3h/周</div>
+    <div class="sc-title">财务系统 · 网页数据抓取</div>
+    <div class="sc-subtitle">B/S 架构财务系统 · 全自动化抓取 · 定时执行 · 释放重复人力</div>
   </summary>
   <div class="sc-detail">
-    <p><strong>流程：</strong>自然语言描述需求 → AI 生成处理脚本 → 自动解析银行数据 → 一键输出格式报表</p>
-    <p><strong>效果：</strong>2-3 小时 → 30 分钟 · 错误率显著降低 · 可扩展至月报/季报</p>
+    <p><strong>流程：</strong>自然语言指令 → AI 操控本地浏览器 → 自动登录·导航·抓取 → 结构化存入表格</p>
+    <p><strong>亮点：</strong>全程自动化 · 支持定时触发 · 异常自动告警 · 本地执行数据不出境</p>
   </div>
 </details>
 
 <details class="sc-card">
   <summary class="sc-summary">
     <div class="sc-num">场景 02 · 已在执行</div>
-    <div class="sc-title">财务系统 · 网页数据抓取</div>
-    <div class="sc-subtitle">B/S 架构财务系统 · 数据需人工逐页查看复制 · 重复劳动占比高</div>
+    <div class="sc-title">资金周报 · 设计与编制</div>
+    <div class="sc-subtitle">直击痛点：多银行格式不统一 · 手工汇总耗时 2-3h/周 · 易出错</div>
   </summary>
   <div class="sc-detail">
-    <p><strong>流程：</strong>自然语言指令 → AI 操控本地浏览器 → 自动登录导航抓取 → 数据写入结构化表格</p>
-    <p><strong>效果：</strong>本地执行 · 数据不出境 · 可定时触发 + 异常自动告警</p>
+    <p><strong>流程：</strong>自然语言描述需求 → AI 生成处理脚本 → 自动识别多银行格式 → 一键生成报表</p>
+    <p><strong>效果：</strong>2-3 小时 → 30 分钟 · 效率提升 80%+ · 错误率大幅降低 · 可扩展至月报/季报</p>
   </div>
 </details>
 
@@ -252,11 +291,11 @@ title: AI工具使用报告
   <summary class="sc-summary">
     <div class="sc-num">场景 03 · 已在执行</div>
     <div class="sc-title">单据审查 · 关键信息提取比对</div>
-    <div class="sc-subtitle">合同/发票/付款单 · 人工逐项核对金额/日期/主体 · 审阅疲劳风险</div>
+    <div class="sc-subtitle">合同/发票/付款单 · 本地化处理保障安全 · AI 自动提取比对</div>
   </summary>
   <div class="sc-detail">
     <p><strong>流程：</strong>PDF 导入 → AI 提取关键字段 → 自动交叉比对 → 异常高亮 + 审查摘要</p>
-    <p><strong>效果：</strong>人工仅复核异常项 · 遗漏风险大幅降低 · 审查全程可追溯</p>
+    <p><strong>效果：</strong>全程本地处理 · 数据安全可控 · 人工仅复核异常项 · 审查效率大幅提升</p>
   </div>
 </details>
 
@@ -264,51 +303,9 @@ title: AI工具使用报告
 
 ---
 
-<div class="section-header" id="insights">
-  <span class="section-num">PART 04</span>
-  <h2>使用心得与注意事项</h2>
-</div>
-
-<div class="warn-banner">
-  <strong>核心原则：安全第一，效率第二。</strong> AI 工具带来的效率提升必须以信息安全为前提。所有涉及敏感数据的操作必须在本地执行，绝不可将客户信息、银行账号、商业机密输入公共云端 AI 服务。
-</div>
-
-<div class="insight-card">
-  <div class="insight-text">
-    <strong>AI 工具领域不存在"最强又最简单"的选项。</strong>Claude Code 能力最强但入门最陡，Codex 最友好但天花板明显。真正的效率提升，不在于选哪个工具，而在于<strong>是否愿意投入时间跨越学习曲线</strong>。
-  </div>
-</div>
-
-<div class="insight-card">
-  <div class="insight-text">
-    <strong>模型选择的核心原则是"够用就好"。</strong>DeepSeek V4 Pro 覆盖 80% 日常需求，性价比优势巨大。评估模型不能只看性能指标，<strong>速度 · 质量 · Token 消耗</strong> 必须综合考量。
-  </div>
-</div>
-
-<div class="insight-card">
-  <div class="insight-text">
-    <strong>"AI 是锤子，关键是你知不知道钉子在哪。"</strong>三个场景的成功落地，前提不是 AI 有多强，而是对自身业务流程的痛点有足够深刻的理解。财务人员学 AI 不是转行做程序员，而是<strong>用技术武装专业，让判断力被放大</strong>。
-  </div>
-</div>
-
-### 安全使用红线
-
-<div class="vtable-wrap">
-
-| 类别 | 允许 | 禁止 |
-|------|------|------|
-| **数据范围** | 脱敏后的模板数据、公开信息 | 客户个人信息、银行账号密码、商业合同原文 |
-| **执行环境** | Claude Code 本地终端、本地浏览器 | 将敏感文件上传至公有云 AI 平台 |
-| **模型选择** | 本地部署或经安全评估的模型 | 未经审批的境外 AI 服务 |
-| **输出产物** | 代码脚本、格式模板、流程说明 | 含敏感数据的完整报表 |
-
-</div>
-
----
-
 <div class="section-header" id="recommendations">
-  <span class="section-num">PART 05</span>
-  <h2>关键建议</h2>
+  <span class="section-num">PART 04</span>
+  <h2>工具及模型使用感受</h2>
 </div>
 
 <div class="decision-table">
@@ -346,7 +343,64 @@ title: AI工具使用报告
 
 ---
 
+<div class="section-header" id="insights">
+  <span class="section-num">PART 05</span>
+  <h2>使用心得与注意事项</h2>
+</div>
+
+<div class="warn-banner">
+  <strong>核心原则：安全第一，效率第二。</strong> AI 工具带来的效率提升必须以信息安全为前提。所有涉及敏感数据的操作必须在本地执行，绝不可将客户信息、银行账号、商业机密输入公共云端 AI 服务。
+</div>
+
+<div class="decision-table">
+  <div class="dt-row dt-header">
+    <div class="dt-cell">红线类别</div>
+    <div class="dt-cell">允许范围</div>
+    <div class="dt-cell">严禁事项</div>
+  </div>
+  <div class="dt-row">
+    <div class="dt-cell dt-label">数据范围</div>
+    <div class="dt-cell dt-reason">脱敏后的模板数据、公开信息</div>
+    <div class="dt-cell dt-reason" style="color:#b91c1c;">客户个人信息、银行账号密码、商业合同原文</div>
+  </div>
+  <div class="dt-row">
+    <div class="dt-cell dt-label">执行环境</div>
+    <div class="dt-cell dt-reason">本地终端、本地浏览器</div>
+    <div class="dt-cell dt-reason" style="color:#b91c1c;">将敏感文件上传至公有云 AI 平台</div>
+  </div>
+  <div class="dt-row">
+    <div class="dt-cell dt-label">模型选择</div>
+    <div class="dt-cell dt-reason">本地部署或经安全评估的模型</div>
+    <div class="dt-cell dt-reason" style="color:#b91c1c;">未经审批的境外 AI 服务</div>
+  </div>
+  <div class="dt-row">
+    <div class="dt-cell dt-label">输出产物</div>
+    <div class="dt-cell dt-reason">代码脚本、格式模板、流程说明</div>
+    <div class="dt-cell dt-reason" style="color:#b91c1c;">含敏感数据的完整报表</div>
+  </div>
+</div>
+
+<div class="insight-card">
+  <div class="insight-text">
+    <strong>AI 工具领域不存在"最强又最简单"的选项。</strong>Claude Code 能力最强但入门最陡，Codex 最友好但天花板明显。真正的效率提升，不在于选哪个工具，而在于<strong>是否愿意投入时间跨越学习曲线</strong>。
+  </div>
+</div>
+
+<div class="insight-card">
+  <div class="insight-text">
+    <strong>模型选择的核心原则是"够用就好"。</strong>DeepSeek V4 Pro 覆盖 80% 日常需求，性价比优势巨大。评估模型不能只看性能指标，<strong>速度 · 质量 · Token 消耗</strong> 必须综合考量。
+  </div>
+</div>
+
+<div class="insight-card">
+  <div class="insight-text">
+    <strong>"AI 是锤子，关键是你知不知道钉子在哪。"</strong>三个场景的成功落地，前提不是 AI 有多强，而是对自身业务流程的痛点有足够深刻的理解。财务人员学 AI 不是转行做程序员，而是<strong>用技术武装专业，让判断力被放大</strong>。
+  </div>
+</div>
+
+---
+
 <div style="text-align:center;padding:48px 0 24px;color:var(--vp-c-text-muted);font-size:0.85rem;">
-  <p>报告版本 v5.0 · 2026.06.23 · 资金管理部</p>
+  <p>报告版本 v5.0 · 2026.06.23 · 财务管理中心</p>
   <p style="margin-top:8px;">📄 <a href="/-/发言稿" style="color:var(--c-brand);">下载发言稿</a> &nbsp;|&nbsp; 技术永远在进化，但理解业务 · 善用工具 · 持续学习 —— 才是财务人在 AI 时代的护城河。</p>
 </div>
