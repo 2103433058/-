@@ -15,11 +15,11 @@ export default defineConfig({
       {
         text: '报告目录',
         items: [
-          { text: '一、AI 工具概览', link: '#一-ai-工具概览' },
-          { text: '二、AI 模型调用实践', link: '#二-ai-模型调用实践' },
-          { text: '三、具体运用场景', link: '#三-具体运用场景' },
-          { text: '四、使用感受与心得', link: '#四-使用感受与心得' },
-          { text: '五、展望与建议', link: '#五-展望与建议' },
+          { text: '一、AI 工具矩阵', link: '/#tools' },
+          { text: '二、AI 模型雷达', link: '/#models' },
+          { text: '三、运用场景实战', link: '/#scenarios' },
+          { text: '四、使用心得与注意事项', link: '/#insights' },
+          { text: '五、关键建议', link: '/#recommendations' },
         ],
       },
     ],
