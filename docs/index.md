@@ -3,280 +3,425 @@ layout: page
 title: AI工具使用报告
 ---
 
-# AI 工具使用报告
+<div class="hero-section">
+  <div class="hero-badge">● 2026 · 资金管理部</div>
+  <h1>AI 工具使用报告</h1>
+  <p class="hero-subtitle">人工智能编程工具与模型 · 企业财务场景实践</p>
+</div>
 
-**——AI 编程工具与模型在企业财务场景中的运用实践**
-
-> **报告日期：** 2026年6月  
-> **报告人：** 资金管理部  
-> **受众：** 公司管理层  
-
----
-
-## 摘要
-
-本报告基于财务资金管理岗位的实际工作场景，系统梳理了当前主流 AI 编程工具（Claude Code、Codex、Qoderwork、Trae）和 AI 大语言模型（DeepSeek V4 Pro、Fable 5、GLM 5.2、Kimi 2.7、Qwen 3.7 Max+、GPT 系列）的使用体验。通过在资金周报编制、网页数据抓取、单据审查等具体业务场景中的实践，验证了 AI 工具在财务工作中的实际价值。报告提出以"深度使用者 + 团队普及"双轨策略推进 AI 工具落地，并给出了模型选型和试点推广的具体建议。
-
----
-
-## 一、AI 工具概览
-
-当前市面上主流的 AI 编程工具可归纳为两大类：一类是以 Claude Code 为代表的终端原生型 Agent 工具，强调工程能力和工作流严谨性；另一类是以 Codex 为代表的 GUI 友好型工具，强调低门槛上手体验。以下从实际使用角度对四款工具进行对比分析。
-
-### 1.1 工具对比总览
-
-| 评估维度 | Claude Code | Codex | Qoderwork | Trae |
-|----------|------------|-------|-----------|------|
-| **综合工作能力** | ★★★★★ 业界最强 | ★★★☆☆ | ★★★★☆ | ★★★★☆ |
-| **入门门槛** | ★★☆☆☆ 需投入学习 | ★★★★★ 零基础上手 | ★★★☆☆ | ★★☆☆☆ |
-| **用户界面友好度** | 终端/VSCode 扩展 | 现代化 GUI | 模块化面板 | 专业 IDE |
-| **第三方模型兼容** | 强（国产模型保持高水准） | 弱（切换后能力缩水明显） | 中 | 中 |
-| **工作流严谨性** | ★★★★★ Agent 调度体系 | ★★★☆☆ | ★★★★☆ | ★★★★☆ |
-| **Token 消耗水平** | 中等 | 较高 | 中等 | 中等 |
-| **适用人群** | 深度使用者、技术骨干 | 入门用户、轻量任务 | 企业 AI 转型团队 | 专业开发人员 |
-
-### 1.2 各工具详细评价
-
-**Claude Code（推荐指数：★★★★★）**
-
-Claude Code 是目前实际工作能力最强的 AI 编程助手。其核心优势在于：
-
-- **Agent 架构设计：** 基于多智能体调度框架，支持 subagent 并行执行、worktree 工作区隔离、hook 自动化触发，工程能力业界领先。在实际使用中，单个复杂任务可被自动拆解为数个子任务并行处理，显著提升执行效率。
-- **多模型后端：** 原生支持 Anthropic Claude 系列，同时可配置接入 DeepSeek、GLM 等国产模型。经实测，配置国产模型后 AI 的任务分解和代码生成能力仍保持在较高水平，未出现 Codex 切换模型后能力断崖式下降的问题。
-- **工具生态丰富：** 内置 MCP（Model Context Protocol）协议支持，可扩展接入浏览器操控、文件系统管理、数据库查询等外部工具链，使其能力边界远超纯文本交互。
-- **适用场景：** 复杂开发任务、多步骤自动化流程、需要精确控制执行过程的工程化场景。
-
-不足之处在于：入门门槛较高，需要理解 Agent、Hook、Worktree 等概念；终端界面和 VSCode 扩展对非技术用户不够直观。建议为深度使用者配备，作为团队的 AI 核心工具。
-
-**Codex（推荐指数：★★★☆☆）**
-
-Codex 由 OpenAI 出品，主打"零门槛上手"体验：
-
-- **优势：** 图形界面现代化，安装过程一键完成，初次使用者可在数分钟内开始工作。交互逻辑接近 ChatGPT，学习曲线平缓。
-- **不足：** Token 消耗量偏大，在持续使用场景下成本上升较快。更重要的是，Codex 接入第三方 AI 模型（如国产模型）后，推理和代码生成质量会出现明显下降，严重限制了模型选择的灵活性。工作流的逻辑严谨性亦不如 Claude Code，在多步骤复杂任务中偶尔出现上下文丢失或逻辑跳跃。
-
-**Qoderwork（推荐指数：★★★★☆）**
-
-Qoderwork 目前正在公司内部体验使用，其定位是面向企业 AI 转型的一站式平台：
-
-- **模块化设计：** 将 AI 能力按使用场景封装为独立模块（编码、文档撰写、PPT 生成、数据分析等），降低了一线员工的选择和操作门槛。对于正处于 AI 智能体转型期的团队而言，这种"开箱即用"的设计理念具有较高的实用价值。
-- **企业属性：** 相比其他工具更注重团队协作和权限管理，适合在企业内部推广使用。
-
-**Trae（推荐指数：★★☆☆☆ 对非技术用户）**
-
-Trae 是字节跳动推出的 AI 编程工具，深度集成于 IDE 环境，功能偏重专业软件开发场景。对于非编程岗位的普通用户而言，其功能定位和使用门槛均不够友好，更适合专职开发人员使用。
+<div class="kpi-grid">
+  <div class="kpi-card">
+    <div class="kpi-icon">🧰</div>
+    <div class="kpi-value">4</div>
+    <div class="kpi-label">工具深度评测</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-icon">🧠</div>
+    <div class="kpi-value">6</div>
+    <div class="kpi-label">模型实际对比</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-icon">🎯</div>
+    <div class="kpi-value">6</div>
+    <div class="kpi-label">落地运用场景</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-icon">⚡</div>
+    <div class="kpi-value">80%+</div>
+    <div class="kpi-label">预估效率提升</div>
+  </div>
+</div>
 
 ---
 
-## 二、AI 模型调用实践
+<div class="section-header">
+  <span class="section-num">PART 01</span>
+  <h2>AI 工具矩阵</h2>
+</div>
 
-AI 工具是载体，背后的 AI 大语言模型才是核心引擎。经过对多款主流模型的持续跟踪和实际使用，以下从实际工作角度给出评估。
+<div class="tool-cards">
 
-### 2.1 模型能力对比
+<div class="tool-card">
+  <div class="tc-header">
+    <span class="tc-icon">🟣</span>
+    <span class="tc-name">Claude Code</span>
+    <span class="tc-rating"><span class="stars">★★★★★</span> 推荐</span>
+  </div>
+  <div class="tc-meta">
+    <span class="tc-meta-item">🏢 <strong>Anthropic</strong></span>
+    <span class="tc-meta-item">💻 终端 + VSCode</span>
+    <span class="tc-meta-item">💰 消耗：中</span>
+  </div>
+  <p style="font-size:0.85rem;margin:8px 0;color:#94a3b8;">Agent 架构 · 多模型后端 · worktree 隔离 · subagent 并行调度 · Hook 自动化。配置国产模型后能力保持度高，<strong style="color:#e2e8f0;">实际工作能力业界最强</strong>。</p>
+  <div class="tc-tags">
+    <span class="tc-tag good">工作流严谨</span>
+    <span class="tc-tag good">扩展性强</span>
+    <span class="tc-tag warn">入门门槛高</span>
+    <span class="tc-tag warn">界面不够友好</span>
+  </div>
+</div>
 
-| 模型 | 定位 | 性价比 | 核心优势 | 主要局限 |
-|------|------|--------|----------|----------|
-| **DeepSeek V4 Pro** | 国产性价比标杆 | ★★★★★ | 综合能力强，成本可控，覆盖日常 80% 任务 | 极限推理场景上限不如顶级模型 |
-| **Fable 5** | 全球公认最强 | 待实测 | 复杂推理、架构设计能力业界顶尖 | 未经实际体验，仅据主流评测 |
-| **GLM 5.2** | 国产第一梯队 | ★★★★☆ | 综合能力国产最强，响应速度快 | Token 消耗较为明显 |
-| **Kimi 2.7** | 编程友好型 | ★★★★☆ | 编程能力突出，实际场景处理扎实 | 非编程领域表现中规中矩 |
-| **Qwen 3.7 Max+** | 通用万金油 | ★★★☆☆ | 处理速度快，覆盖面广 | 长深项目性价比低，缺乏深度 |
-| **GPT 系列** | 行业标杆 | ★★★☆☆ | 生态成熟，通用能力强 | 国内访问受限，企业部署成本高 |
+<div class="tool-card">
+  <div class="tc-header">
+    <span class="tc-icon">🟡</span>
+    <span class="tc-name">Codex</span>
+    <span class="tc-rating"><span class="stars">★★★<span class="dim">★★</span></span></span>
+  </div>
+  <div class="tc-meta">
+    <span class="tc-meta-item">🏢 <strong>OpenAI</strong></span>
+    <span class="tc-meta-item">🖥️ GUI 桌面端</span>
+    <span class="tc-meta-item">💰 消耗：高</span>
+  </div>
+  <p style="font-size:0.85rem;margin:8px 0;color:#94a3b8;">一键安装 · 零配置上手 · 交互友好。<strong style="color:#e2e8f0;">入门体验最佳</strong>，但接入第三方模型后推理能力下降明显，工作流逻辑不如 Claude Code 严谨。</p>
+  <div class="tc-tags">
+    <span class="tc-tag good">用户友好</span>
+    <span class="tc-tag good">零基础上手</span>
+    <span class="tc-tag warn">模型切换缩水</span>
+    <span class="tc-tag warn">Token 消耗大</span>
+  </div>
+</div>
 
-### 2.2 模型选择策略
+<div class="tool-card">
+  <div class="tc-header">
+    <span class="tc-icon">🟢</span>
+    <span class="tc-name">Qoderwork</span>
+    <span class="tc-rating"><span class="stars">★★★★<span class="dim">★</span></span> 公司体验中</span>
+  </div>
+  <div class="tc-meta">
+    <span class="tc-meta-item">🏢 <strong>国产平台</strong></span>
+    <span class="tc-meta-item">📦 模块化面板</span>
+    <span class="tc-meta-item">💰 消耗：中</span>
+  </div>
+  <p style="font-size:0.85rem;margin:8px 0;color:#94a3b8;">编码 · 文档 · PPT · 数据分析 — <strong style="color:#e2e8f0;">模块化封装 AI 能力</strong>，降低使用门槛。适合企业 AI 转型期团队推广，正在公司内部体验验证。</p>
+  <div class="tc-tags">
+    <span class="tc-tag good">企业适配</span>
+    <span class="tc-tag good">开箱即用</span>
+    <span class="tc-tag">模块化</span>
+    <span class="tc-tag">团队友好</span>
+  </div>
+</div>
 
-基于实际使用经验，建议采取"分层调用"策略：
+<div class="tool-card">
+  <div class="tc-header">
+    <span class="tc-icon">⚪</span>
+    <span class="tc-name">Trae</span>
+    <span class="tc-rating"><span class="stars">★★★<span class="dim">★★</span></span></span>
+  </div>
+  <div class="tc-meta">
+    <span class="tc-meta-item">🏢 <strong>字节跳动</strong></span>
+    <span class="tc-meta-item">🖥️ 专业 IDE</span>
+    <span class="tc-meta-item">💰 消耗：中</span>
+  </div>
+  <p style="font-size:0.85rem;margin:8px 0;color:#94a3b8;">深度集成 IDE · 面向专业开发场景。<strong style="color:#e2e8f0;">不适合非技术岗位</strong>，财务等业务人员使用门槛过高。</p>
+  <div class="tc-tags">
+    <span class="tc-tag">编程专业</span>
+    <span class="tc-tag warn">非技术不友好</span>
+    <span class="tc-tag warn">场景局限</span>
+  </div>
+</div>
 
-- **日常主力（默认模型）：DeepSeek V4 Pro** —— 覆盖日常开发、文档撰写、数据分析等 80% 的工作场景，在性能与成本之间取得最优平衡。其"下限高"的特点保证了常规任务的稳定输出质量。
-- **关键攻坚（按需调用）：Fable 5 / GLM 5.2** —— 当面对复杂系统设计、多步骤推理、跨领域综合分析等高难度任务时，切换至顶级模型。GLM 5.2 作为国产最强，响应速度和综合能力俱佳，但需注意 Token 消耗。
-- **编程专项：Kimi 2.7** —— 在代码生成、调试、重构等编程密集型任务中表现突出，建议编程相关场景优先使用。
-- **快速响应：Qwen 3.7 Max+** —— 适合轻量、高频、对响应速度敏感的交互场景，但不建议用于需要深度分析和长链条推理的项目。
+</div>
 
-### 2.3 隐性成本提醒
+### 选型结论
 
-Token 消耗是使用 AI 模型时最容易被忽视的成本要素。GLM 5.2 虽然能力强、响应快，但其 Token 消耗量明显高于同级别模型；Qwen 3.7 Max+ 在处理复杂项目时因缺乏深度，往往需要更长的对话轮次才能达到满意结果，反而推高了总成本。**模型选择应综合考虑速度、质量、消耗三个维度，而非单一追求性能指标。**
-
----
-
-## 三、具体运用场景
-
-本章是报告的核心部分，基于财务资金管理岗位的实际工作内容，展示 AI 工具在真实业务场景中的运用方式和实践效果。
-
-### 场景一：资金周报的设计与编制
-
-**业务痛点：**
-
-每周需汇总多家银行（涵盖基本户、一般户、专户等）的资金余额和变动情况，数据来源分散（各银行网银系统导出的 Excel/CSV 文件格式各异），手工汇总耗时长、易出错，且格式调整占用了大量低价值劳动时间。
-
-**AI 实现方案：**
-
-1. **模板设计阶段：** 向 Claude Code 以自然语言描述周报结构和指标需求（账户名称、期初余额、本期收入、本期支出、期末余额、资金分布饼图等），AI 自动生成标准化的数据处理脚本（Python）和 Markdown 格式模板。
-2. **数据导入阶段：** 将各银行导出的原始数据文件放入指定目录，AI 编写的数据解析脚本自动识别各文件格式，完成数据清洗和字段映射。
-3. **报表生成阶段：** 一键运行脚本，自动输出格式化周报（含汇总表和可视化图表），支持导出为 PDF 或嵌入邮件正文。
-
-**实际成效：**
-
-- 报表编制时间从原来每周 2-3 小时压缩至约 30 分钟（含数据核对）
-- 数据录入错误率显著降低
-- 周末/节假日可远程快速生成，不受办公环境限制
-
-**扩展潜力：**
-
-该模式可直接复用于月度资金分析报告、季度资金运行报告，仅需调整模板参数和统计周期即可。
-
-### 场景二：财务管理系统网页数据抓取
-
-**业务痛点：**
-
-公司财务管理系统为 B/S 架构 Web 端应用，日常工作中需频繁登录系统查阅和导出各类数据——账户余额、交易流水、付款审批状态、预算执行进度等。大量时间消耗在"登录 → 导航 → 查找 → 复制 → 整理"的重复性操作上。
-
-**AI 实现方案：**
-
-1. **浏览器操控：** Claude Code 通过 Playwright MCP 工具接入本地 Chrome/Edge 浏览器，使用自然语言指令即可操控浏览器完成指定操作。
-2. **自动化流程：** "打开财务系统 → 输入账号密码 → 导航至资金管理模块 → 抓取当日各账户余额 → 将数据写入结构化表格 → 关闭浏览器"——整个流程由 AI 按指令自动执行。
-3. **定时与监控：** 可设置定时触发（如每日上午 9:00），自动抓取关键数据并生成日报摘要；异常数据（如余额低于阈值）自动标记提醒。
-
-**实际成效：**
-
-- 原本需人工逐页操作的重复性数据采集工作，全部交由 AI 自动完成
-- 数据采集频率可由"有空才查"提升为"定时自动采集"
-
-**安全性保障：**
-
-所有操作均在本地浏览器中执行，浏览器操控指令不经过第三方服务器，财务系统的登录凭证和业务数据始终保留在本地环境内，不存在数据外泄风险。
-
-### 场景三：单据关键信息审查
-
-**业务痛点：**
-
-资金管理岗日常需审核大量单据——付款申请单、合同、发票、银行回单等。每份单据需核对的关键字段包括：金额（大小写是否一致）、日期（是否在有效期内）、收付款主体名称（是否与合同一致）、账号信息等。人工逐项核对不仅效率低，且长时间重复劳动后容易出现"审阅疲劳"导致的遗漏。
-
-**AI 实现方案：**
-
-1. **单据解析：** 将 PDF 格式的单据文件（合同、发票影像件等）导入，AI 自动读取文档内容并提取关键字段（金额、日期、主体名称、银行账号等）。
-2. **交叉比对：** AI 将提取信息与系统中的原始记录（或审批标准）进行逐项比对——例如发票金额与合同金额是否一致、收款方名称与合同签约方是否一致、付款日期是否在合同约定期限内。
-3. **异常标记与摘要：** 比对结果以审查摘要形式呈现，差异项高亮标记，审查人员仅需聚焦异常项进行复核确认。
-
-**实际成效：**
-
-- 单据审查效率显著提升，特别是在大批量单据集中审核时优势突出
-- 降低人工遗漏风险，关键字段漏审概率大幅下降
-- 审查过程可追溯，每份单据的比对结果留档备查
-
-### 场景四：银行回单自动归档与对账（推荐）
-
-**业务背景：**
-
-月结对账是资金管理的基础工作——下载各银行账户的电子回单，逐笔与内部资金系统流水匹配，标记差异并查明原因。账户数量越多，该项工作的时间成本越高。
-
-**AI 可行方案：**
-
-批量导入银行回单 PDF/CSV → AI 自动识别回单中的关键信息（金额、对方户名、摘要、日期）→ 与系统内资金流水逐笔匹配 → 未匹配项生成差异清单 → 人工仅需复核差异项。
-
-**预期效果：**
-
-月结对账效率可提升 60% 以上，尤其适合账户数量较多的企业场景。
-
-### 场景五：授信融资资料智能整理（推荐）
-
-**业务背景：**
-
-融资授信是资金管理的重要职能，每次银行授信审批需提交全套资料——审计报告（单体+合并）、征信报告、纳税申报表、财务报表等，且每家银行要求不尽相同。当前工作模式是人工翻阅数十份 PDF，逐份提取关键财务数据（资产总额、负债总额、营业收入、净利润等），填入银行要求的资料清单模板。
-
-**AI 可行方案：**
-
-将全套授信资料 PDF 批量导入 → AI 自动逐份读取，提取关键财务指标并标注数据来源页码 → 自动汇总生成授信资料摘要表和清单 → 人工复核确认。
-
-**预期效果：**
-
-资料整理时间由数天压缩至数小时，且避免了人工翻阅 PDF 抄录数据的转录错误。
-
-### 场景六：银行/内部公文智能起草（推荐）
-
-**业务背景：**
-
-日常工作中需频繁撰写各类正式文书——银行沟通函、授信申请说明、内部汇报公文、资金调度说明等。这些文书有固定的格式规范和行文风格，但每次内容不同，需从零起草。
-
-**AI 可行方案：**
-
-向 AI 提供核心要点（事由、金额、时间、对方名称等），AI 根据正式公文格式自动生成初稿 → 人工审核修改后即可使用。
-
-**预期效果：**
-
-公文起草效率大幅提升，格式规范性得到保证。
+<div class="strategy-box">
+  <h4>🎯 推荐策略：双轨并行</h4>
+  <p><strong>深度使用者 → Claude Code</strong>（复杂任务、自动化建设）&nbsp;&nbsp;|&nbsp;&nbsp;<strong>团队推广 → Qoderwork</strong>（日常文档、数据处理）</p>
+</div>
 
 ---
 
-## 四、使用感受与心得
+<div class="section-header">
+  <span class="section-num">PART 02</span>
+  <h2>AI 模型雷达</h2>
+</div>
 
-### 4.1 关于 AI 工具：能力与易用性的经典权衡
+### 核心模型一览
 
-在实际使用过程中，一个深刻的体会是：**AI 工具领域不存在"既最强又最简单"的选项。** Claude Code 能力最强但入门最陡——需要理解 Agent 调度、Hook 机制、Worktree 隔离等工程概念，前期的学习投入不可忽视。Codex 零基础上手，体验流畅，但一旦进入复杂任务场景，其能力天花板就暴露出来——工作流严谨性不足，且在接入第三方模型后推理质量下降明显。
+<div class="model-grid">
 
-这种"能力-易用性"的权衡本质上反映了两种产品哲学：Claude Code 选择面向专业使用者，用复杂度换取能力上限；Codex 选择面向大众用户，用能力上限换取易用性。**对于企业而言，真正的效率提升不在于选哪个工具，而在于是否愿意投入时间跨越学习曲线。**
+<div class="model-item">
+  <div class="m-name">🐋 DeepSeek V4 Pro</div>
+  <div class="m-role">日常主力 · 性价比之王</div>
+  <div style="font-size:0.78rem;color:var(--vp-c-text-muted);margin:8px 0;">性价比</div>
+  <div class="m-bar"><div class="m-bar-fill high" style="width:95%"></div></div>
+  <div style="font-size:0.78rem;color:var(--vp-c-text-muted);margin:4px 0;">综合能力</div>
+  <div class="m-bar"><div class="m-bar-fill mid" style="width:80%"></div></div>
+  <div style="font-size:0.78rem;color:var(--vp-c-text-muted);margin:4px 0;">复杂推理</div>
+  <div class="m-bar"><div class="m-bar-fill low" style="width:60%"></div></div>
+  <p style="font-size:0.75rem;color:var(--vp-c-text-muted);margin-top:10px;">✅ 覆盖 80% 日常需求<br>⚠️ 极限推理不如顶级模型</p>
+</div>
 
-Qoderwork 在两者间找到了一条中间路径，通过模块化封装降低了 AI 能力的使用门槛，适合团队层面的推广普及。这种"封装复杂性、暴露简单性"的设计思路，对于尚处于 AI 转型初期的团队具有较高的参考价值。
+<div class="model-item">
+  <div class="m-name">🌟 Fable 5</div>
+  <div class="m-role">全球标杆 · 最强模型</div>
+  <div style="font-size:0.78rem;color:var(--vp-c-text-muted);margin:8px 0;">复杂推理</div>
+  <div class="m-bar"><div class="m-bar-fill high" style="width:98%"></div></div>
+  <div style="font-size:0.78rem;color:var(--vp-c-text-muted);margin:4px 0;">综合能力</div>
+  <div class="m-bar"><div class="m-bar-fill high" style="width:97%"></div></div>
+  <div style="font-size:0.78rem;color:var(--vp-c-text-muted);margin:4px 0;">性价比</div>
+  <div class="m-bar"><div class="m-bar-fill low" style="width:40%"></div></div>
+  <p style="font-size:0.75rem;color:var(--vp-c-text-muted);margin-top:10px;">✅ 公认最强推理能力<br>⚠️ 未实际体验 · 据主流评测</p>
+</div>
 
-### 4.2 关于 AI 模型：够用就好，而非追求最强
+<div class="model-item">
+  <div class="m-name">🔥 GLM 5.2</div>
+  <div class="m-role">国产最强 · 快响应</div>
+  <div style="font-size:0.78rem;color:var(--vp-c-text-muted);margin:8px 0;">综合能力</div>
+  <div class="m-bar"><div class="m-bar-fill high" style="width:88%"></div></div>
+  <div style="font-size:0.78rem;color:var(--vp-c-text-muted);margin:4px 0;">响应速度</div>
+  <div class="m-bar"><div class="m-bar-fill high" style="width:92%"></div></div>
+  <div style="font-size:0.78rem;color:var(--vp-c-text-muted);margin:4px 0;">Token 消耗</div>
+  <div class="m-bar"><div class="m-bar-fill low" style="width:45%"></div></div>
+  <p style="font-size:0.75rem;color:var(--vp-c-text-muted);margin-top:10px;">✅ 国产标杆 · 速度快<br>⚠️ Token 消耗明显偏高</p>
+</div>
 
-模型选择的核心原则是"匹配场景"，而非"追求参数"。DeepSeek V4 Pro 的实际表现极具说服力——在绝大多数日常工作场景中，其输出质量与顶级模型差距并不明显，但性价比优势巨大。它覆盖了 80% 以上的日常需求，只有在面对极端复杂的多步骤推理任务时，才会暴露其"上限"。
+<div class="model-item">
+  <div class="m-name">🚀 Kimi 2.7</div>
+  <div class="m-role">编程专家 · 场景实战</div>
+  <div style="font-size:0.78rem;color:var(--vp-c-text-muted);margin:8px 0;">编程能力</div>
+  <div class="m-bar"><div class="m-bar-fill high" style="width:90%"></div></div>
+  <div style="font-size:0.78rem;color:var(--vp-c-text-muted);margin:4px 0;">实际场景</div>
+  <div class="m-bar"><div class="m-bar-fill mid" style="width:82%"></div></div>
+  <div style="font-size:0.78rem;color:var(--vp-c-text-muted);margin:4px 0;">通用领域</div>
+  <div class="m-bar"><div class="m-bar-fill mid" style="width:70%"></div></div>
+  <p style="font-size:0.75rem;color:var(--vp-c-text-muted);margin-top:10px;">✅ 编程代码突出<br>⚠️ 非编程领域一般</p>
+</div>
 
-GLM 5.2 作为国产模型中的佼佼者，综合能力和响应速度令人印象深刻，但其 Token 消耗较为激进——这在持续使用中会转化为不可忽视的成本。这提醒我们，模型评估不能只看"快不快、准不准"，还需要关注"贵不贵"——速度、质量、消耗三者必须综合考量。
+<div class="model-item">
+  <div class="m-name">🌊 Qwen 3.7 Max+</div>
+  <div class="m-role">万金油 · 速度快</div>
+  <div style="font-size:0.78rem;color:var(--vp-c-text-muted);margin:8px 0;">响应速度</div>
+  <div class="m-bar"><div class="m-bar-fill high" style="width:93%"></div></div>
+  <div style="font-size:0.78rem;color:var(--vp-c-text-muted);margin:4px 0;">综合能力</div>
+  <div class="m-bar"><div class="m-bar-fill mid" style="width:73%"></div></div>
+  <div style="font-size:0.78rem;color:var(--vp-c-text-muted);margin:4px 0;">深度项目</div>
+  <div class="m-bar"><div class="m-bar-fill low" style="width:35%"></div></div>
+  <p style="font-size:0.75rem;color:var(--vp-c-text-muted);margin-top:10px;">✅ 轻量快速响应<br>⚠️ 长深项目性价比低</p>
+</div>
 
-国产模型的整体进步速度令人振奋。以 GLM 5.2、DeepSeek V4 Pro 为代表的国产模型，在综合能力上已大幅缩小与国际顶尖模型的差距，且在中文场景的理解和生成上具有天然优势。这种进步为企业提供了更多的模型选择空间，也降低了对单一模型供应商的依赖风险。
+<div class="model-item">
+  <div class="m-name">🤖 GPT 系列</div>
+  <div class="m-role">行业基准 · 生态成熟</div>
+  <div style="font-size:0.78rem;color:var(--vp-c-text-muted);margin:8px 0;">生态成熟度</div>
+  <div class="m-bar"><div class="m-bar-fill high" style="width:95%"></div></div>
+  <div style="font-size:0.78rem;color:var(--vp-c-text-muted);margin:4px 0;">综合能力</div>
+  <div class="m-bar"><div class="m-bar-fill high" style="width:85%"></div></div>
+  <div style="font-size:0.78rem;color:var(--vp-c-text-muted);margin:4px 0;">国内访问</div>
+  <div class="m-bar"><div class="m-bar-fill low" style="width:30%"></div></div>
+  <p style="font-size:0.75rem;color:var(--vp-c-text-muted);margin-top:10px;">✅ 标杆级通用能力<br>⚠️ 国内访问受限</p>
+</div>
 
-### 4.3 核心感悟
+</div>
 
-> **"AI 工具和模型是锤子，关键是你知不知道钉子在哪。"**
+### 分层调用策略
 
-三个运用场景的成功实践，其前提条件不是 AI 工具本身有多强大，而是我们对自身业务流程的痛点有足够深刻的理解。资金周报的编制逻辑、财务系统的数据流转、单据审查的关键风险点——这些"领域知识"才是 AI 能够发挥价值的基础。
+<div class="strategy-box">
+  <h4>🧠 场景 → 模型 匹配指南</h4>
+  <p>🏠 <strong>日常默认</strong> → DeepSeek V4 Pro &nbsp;|&nbsp; 🔑 <strong>关键攻坚</strong> → Fable 5 / GLM 5.2 &nbsp;|&nbsp; 💻 <strong>编程专项</strong> → Kimi 2.7 &nbsp;|&nbsp; ⚡ <strong>快速响应</strong> → Qwen 3.7 Max+</p>
+</div>
 
-另一个重要认知是：**财务人员学习和使用 AI 工具，不是为了转行做程序员，而是为了让自己的专业能力被技术放大。** 我们懂财务、懂流程、懂风险控制——这些是不可替代的核心能力。AI 解决的是重复劳动、格式调整、数据搬运等"低价值但高耗时"的环节，让我们可以把精力集中在判断、决策和沟通上——那些真正需要专业经验的事情上。
+> ⚠️ **隐性成本提醒**：模型评估必须综合考虑 **速度 · 质量 · Token 消耗** 三个维度，单一追求性能将导致不可忽视的隐性成本。
 
 ---
 
-## 五、展望与建议
+<div class="section-header">
+  <span class="section-num">PART 03</span>
+  <h2>运用场景实战</h2>
+</div>
 
-基于上述工具的评估和实践，对后续 AI 工具的推广使用提出以下建议：
+<div class="scenario-cards">
 
-### 5.1 试点推广，循序推进
+<div class="sc-card">
+  <div class="sc-num">● 场景 01 · 已在执行</div>
+  <div class="sc-title">📊 资金周报 · 设计与编制</div>
+  <p style="font-size:0.82rem;color:var(--vp-c-text-muted);">多银行数据分散 · 格式不统一 · 手工汇总耗时 2-3h/周</p>
+  <div class="sc-flow">
+    <span class="step">自然语言描述需求</span>
+    <span class="arrow">→</span>
+    <span class="step">AI 生成处理脚本</span>
+    <span class="arrow">→</span>
+    <span class="step">自动解析银行数据</span>
+    <span class="arrow">→</span>
+    <span class="step">一键输出格式报表</span>
+  </div>
+  <div class="sc-result">⚡ <strong>2-3 小时 → 30 分钟</strong> · 错误率显著降低 · 可扩展至月报/季报</div>
+</div>
 
-建议以资金管理组为试点单元，在使用中沉淀可复制的 AI 工作流模板（如资金周报生成脚本、单据审查规则库等），验证成熟后逐步向其他财务模块（预算管理、成本核算、税务管理等）推广。避免全面铺开导致的资源分散和落地困难。
+<div class="sc-card">
+  <div class="sc-num">● 场景 02 · 已在执行</div>
+  <div class="sc-title">🌐 财务系统 · 网页数据抓取</div>
+  <p style="font-size:0.82rem;color:var(--vp-c-text-muted);">B/S 架构财务系统 · 数据需人工逐页查看复制 · 重复劳动占比高</p>
+  <div class="sc-flow">
+    <span class="step">自然语言指令</span>
+    <span class="arrow">→</span>
+    <span class="step">AI 操控本地浏览器</span>
+    <span class="arrow">→</span>
+    <span class="step">自动登录导航抓取</span>
+    <span class="arrow">→</span>
+    <span class="step">数据写入结构化表格</span>
+  </div>
+  <div class="sc-result">🔒 <strong>本地执行 · 数据不出境</strong> · 可定时触发 + 异常自动告警</div>
+</div>
 
-### 5.2 双轨并行，分层配置
+<div class="sc-card">
+  <div class="sc-num">● 场景 03 · 已在执行</div>
+  <div class="sc-title">🔍 单据审查 · 关键信息提取比对</div>
+  <p style="font-size:0.82rem;color:var(--vp-c-text-muted);">合同/发票/付款单 · 人工逐项核对金额/日期/主体 · 审阅疲劳风险</p>
+  <div class="sc-flow">
+    <span class="step">PDF 导入</span>
+    <span class="arrow">→</span>
+    <span class="step">AI 提取关键字段</span>
+    <span class="arrow">→</span>
+    <span class="step">自动交叉比对</span>
+    <span class="arrow">→</span>
+    <span class="step">异常高亮 + 审查摘要</span>
+  </div>
+  <div class="sc-result">🎯 <strong>人工仅复核异常项</strong> · 遗漏风险大幅降低 · 审查全程可追溯</div>
+</div>
 
-工具选型建议采取"深度使用者 + 团队普及"双轨策略：
-- **技术骨干：** 配置 Claude Code，承担复杂开发任务、自动化流程建设和团队技术支持
-- **团队推广：** 引入 Qoderwork，利用其模块化设计降低使用门槛，覆盖文档撰写、数据分析、PPT 制作等通用场景
+<div class="sc-card">
+  <div class="sc-num">○ 场景 04 · 推荐拓展</div>
+  <div class="sc-title">🏦 银行回单 · 自动归档与对账</div>
+  <p style="font-size:0.82rem;color:var(--vp-c-text-muted);">月结对账 · 多账户回单与系统流水逐笔匹配 · 耗时且易遗漏</p>
+  <div class="sc-flow">
+    <span class="step">批量导入回单 PDF</span>
+    <span class="arrow">→</span>
+    <span class="step">AI 识别金额/户名/摘要</span>
+    <span class="arrow">→</span>
+    <span class="step">匹配系统流水</span>
+    <span class="arrow">→</span>
+    <span class="step">差异清单自动输出</span>
+  </div>
+  <div class="sc-result">📈 预估月结对账效率提升 <strong>60%+</strong> · 尤其适合多账户企业</div>
+</div>
 
-### 5.3 模型分场景，成本可控
+<div class="sc-card">
+  <div class="sc-num">○ 场景 05 · 推荐拓展</div>
+  <div class="sc-title">📋 融资授信 · 资料智能整理</div>
+  <p style="font-size:0.82rem;color:var(--vp-c-text-muted);">审计报告/征信报告/纳税表 · 数十份 PDF 逐份翻查 · 手工转录易出错</p>
+  <div class="sc-flow">
+    <span class="step">批量导入授信资料</span>
+    <span class="arrow">→</span>
+    <span class="step">AI 逐份提取财务指标</span>
+    <span class="arrow">→</span>
+    <span class="step">汇总生成摘要 + 清单</span>
+    <span class="arrow">→</span>
+    <span class="step">标注数据来源页码</span>
+  </div>
+  <div class="sc-result">⏱️ 资料整理从 <strong>数天 → 数小时</strong> · 杜绝转录错误</div>
+</div>
 
-- **日常默认：** DeepSeek V4 Pro（高性价比，覆盖 80% 场景）
-- **关键攻坚：** Fable 5 或 GLM 5.2（高难度复杂任务）
-- **编程专项：** Kimi 2.7（代码密集型工作）
+<div class="sc-card">
+  <div class="sc-num">○ 场景 06 · 推荐拓展</div>
+  <div class="sc-title">✉️ 公文/邮件 · 智能起草</div>
+  <p style="font-size:0.82rem;color:var(--vp-c-text-muted);">银行沟通函 · 授信申请说明 · 内部汇报公文 · 每次从零起草</p>
+  <div class="sc-flow">
+    <span class="step">提供核心要点</span>
+    <span class="arrow">→</span>
+    <span class="step">AI 生成正式文书初稿</span>
+    <span class="arrow">→</span>
+    <span class="step">人工审核修改</span>
+    <span class="arrow">→</span>
+    <span class="step">定稿发出</span>
+  </div>
+  <div class="sc-result">📝 起草效率大幅提升 · 格式规范统一 · 减少重复性文案工作</div>
+</div>
 
-同时建议以季度为周期，跟踪各模型的使用频次、Token 消耗和产出质量，基于数据动态调整模型使用策略。
-
-### 5.4 正视学习曲线，投入培训
-
-AI 工具的入门门槛是真实存在的。建议安排 2-3 次内部实操培训，内容聚焦"高频场景的操作流程"（如何用 Claude Code 生成报表脚本、如何用 Qoderwork 撰写工作汇报），而非泛泛的技术介绍。让同事在培训结束时带走的不是概念，而是"下周上班就能用"的具体技能。
-
-### 5.5 明确安全边界
-
-信息安全是企业使用 AI 工具不可逾越的红线。建议明确以下原则：
-- 涉及客户信息、银行账户密码、商业机密的数据，严格限制在本地工具链内处理
-- 禁止将敏感数据输入公开的云端 AI 服务
-- Claude Code 等本地终端工具的浏览器操控、文件处理均在本地执行，可作为安全合规场景的首选
-- 定期审查 AI 工具的数据流向和权限范围
+</div>
 
 ---
 
-## 结语
+<div class="section-header">
+  <span class="section-num">PART 04</span>
+  <h2>核心洞察</h2>
+</div>
 
-AI 工具和模型正在以肉眼可见的速度改变我们的工作方式。这份报告不是终点，而是一个起点——以真实的业务场景为锚点，以实际的使用体验为依据，为公司在 AI 工具应用方面的决策提供参考。技术永远在进化，但"理解业务、善用工具、持续学习"的心态，才是财务人在 AI 时代真正的护城河。
+<div class="insight-card">
+  <div class="insight-text">
+    <strong>AI 工具领域不存在"最强又最简单"的选项。</strong>Claude Code 能力最强但入门最陡，Codex 最友好但天花板明显——这本质上是两种产品哲学的取舍。真正的效率提升，不在于选哪个工具，而在于<strong>是否愿意投入时间跨越学习曲线</strong>。
+  </div>
+</div>
+
+<div class="insight-card">
+  <div class="insight-text">
+    <strong>模型选择的核心原则是"够用就好"。</strong>DeepSeek V4 Pro 覆盖 80% 日常需求，性价比优势巨大。国产模型进步迅速，GLM 5.2 已接近国际一线，但 <strong>速度 · 质量 · Token 消耗</strong> 必须综合考量，不能只看性能指标。
+  </div>
+</div>
+
+<div class="insight-card">
+  <div class="insight-text">
+    <strong>"AI 是锤子，关键是你知不知道钉子在哪。"</strong>三个场景的成功落地，前提不是 AI 有多强，而是对自身业务流程的痛点有足够深刻的理解。财务人员学 AI 不是转行做程序员，而是<strong>用技术武装专业，让判断力被放大</strong>。
+  </div>
+</div>
+
+<div class="feature-grid">
+  <div class="feature-item">
+    <span class="fi-icon">🧩</span>
+    <span class="fi-text"><strong>工具是载体，模型是引擎</strong><br>选对组合比追新更重要</span>
+  </div>
+  <div class="feature-item">
+    <span class="fi-icon">📉</span>
+    <span class="fi-text"><strong>Token 消耗是隐形账本</strong><br>快 ≠ 好，需算综合成本</span>
+  </div>
+  <div class="feature-item">
+    <span class="fi-icon">🔐</span>
+    <span class="fi-text"><strong>数据不出境是红线</strong><br>本地工具链 = 安全合规</span>
+  </div>
+</div>
 
 ---
 
-> **报告完成日期：** 2026年6月23日  
-> **版本：** v1.0  
-> **反馈联系：** 资金管理部
+<div class="section-header">
+  <span class="section-num">PART 05</span>
+  <h2>行动路线图</h2>
+</div>
+
+<div class="roadmap">
+  <div class="rm-step">
+    <div class="rm-icon">🔬</div>
+    <div class="rm-title">试点验证</div>
+    <div class="rm-desc">资金组先跑通<br>沉淀工作流模板</div>
+  </div>
+  <div class="rm-step">
+    <div class="rm-icon">🔧</div>
+    <div class="rm-title">双轨配置</div>
+    <div class="rm-desc">Claude Code 深度使用<br>+ Qoderwork 团队普及</div>
+  </div>
+  <div class="rm-step">
+    <div class="rm-icon">🎓</div>
+    <div class="rm-title">实操培训</div>
+    <div class="rm-desc">2-3 次内部培训<br>聚焦"上班就能用"</div>
+  </div>
+  <div class="rm-step">
+    <div class="rm-icon">📊</div>
+    <div class="rm-title">效果追踪</div>
+    <div class="rm-desc">季度评估模型数据<br>动态调整策略</div>
+  </div>
+  <div class="rm-step">
+    <div class="rm-icon">🔒</div>
+    <div class="rm-title">安全基线</div>
+    <div class="rm-desc">明确数据边界<br>定期权限审查</div>
+  </div>
+</div>
+
+### 关键建议
+
+<div class="vtable-wrap">
+
+| 维度 | 决策 | 理由 |
+|------|------|------|
+| 🏠 **日常模型** | <span class="badge badge-1">DeepSeek V4 Pro</span> | 高性价比，覆盖 80% 场景 |
+| 🔑 **关键攻坚** | <span class="badge badge-2">Fable 5 / GLM 5.2</span> | 复杂任务最优解 |
+| 🧰 **深度工具** | <span class="badge badge-1">Claude Code</span> | 能力最强，技术骨干首选 |
+| 📦 **团队工具** | <span class="badge badge-2">Qoderwork</span> | 低门槛，适合推广普及 |
+| 🔐 **安全原则** | <span class="badge badge-3">本地执行优先</span> | 敏感数据不出境 |
+
+</div>
+
+---
+
+<div style="text-align:center;padding:48px 0 24px;color:var(--vp-c-text-muted);font-size:0.85rem;">
+  <p>报告版本 v2.0 · 2026.06.23 · 资金管理部</p>
+  <p style="margin-top:8px;">技术永远在进化，但理解业务 · 善用工具 · 持续学习 —— 才是财务人在 AI 时代的护城河。</p>
+</div>
