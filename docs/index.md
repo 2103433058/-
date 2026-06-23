@@ -315,7 +315,7 @@ title: AI工具使用报告
 
 <div class="section-header" id="insights">
   <span class="section-num">PART 05</span>
-  <h2>使用心得与注意事项</h2>
+  <h2>感悟心得</h2>
 </div>
 
 <div class="warn-banner">

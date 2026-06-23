@@ -19,7 +19,7 @@ export default defineConfig({
           { text: '二、AI 模型雷达', link: '/#models' },
           { text: '三、运用场景实战', link: '/#scenarios' },
           { text: '四、工具及模型使用建议', link: '/#recommendations' },
-          { text: '五、使用心得与注意事项', link: '/#insights' },
+          { text: '五、感悟心得', link: '/#insights' },
         ],
       },
     ],
