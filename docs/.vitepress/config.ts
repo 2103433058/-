@@ -18,7 +18,7 @@ export default defineConfig({
           { text: '一、AI 工具矩阵', link: '/#tools' },
           { text: '二、AI 模型雷达', link: '/#models' },
           { text: '三、运用场景实战', link: '/#scenarios' },
-          { text: '四、工具及模型使用感受', link: '/#recommendations' },
+          { text: '四、工具及模型使用建议', link: '/#recommendations' },
           { text: '五、使用心得与注意事项', link: '/#insights' },
         ],
       },

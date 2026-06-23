@@ -230,7 +230,7 @@ title: AI工具使用报告
 
 <details class="sc-card">
   <summary class="sc-summary">
-    <div class="sc-num">场景 01 · 已在执行</div>
+    <div class="sc-num">场景 01 · 已完成</div>
     <div class="sc-title">财务系统 · 网页数据抓取</div>
     <div class="sc-subtitle">B/S 架构财务系统 · 全自动化抓取 · 定时执行 · 释放重复人力</div>
   </summary>
@@ -242,25 +242,25 @@ title: AI工具使用报告
 
 <details class="sc-card">
   <summary class="sc-summary">
-    <div class="sc-num">场景 02 · 已在执行</div>
+    <div class="sc-num">场景 02 · 已完成</div>
     <div class="sc-title">资金周报 · 设计与编制</div>
-    <div class="sc-subtitle">直击痛点：多银行格式不统一 · 手工汇总耗时 2-3h/周 · 易出错</div>
+    <div class="sc-subtitle">浪潮系统导出文本格式与模板设计不统一 · 手工汇总 · 核对耗时</div>
   </summary>
   <div class="sc-detail">
-    <p><strong>流程：</strong>自然语言描述需求 → AI 生成处理脚本 → 自动识别多银行格式 → 一键生成报表</p>
+    <p><strong>流程：</strong>自然语言描述需求 → AI 生成处理脚本 → 自动识别底稿文件格式 → 一键生成报表</p>
     <p><strong>效果：</strong>2-3 小时 → 30 分钟 · 效率提升 80%+ · 错误率大幅降低 · 可扩展至月报/季报</p>
   </div>
 </details>
 
 <details class="sc-card">
   <summary class="sc-summary">
-    <div class="sc-num">场景 03 · 已在执行</div>
+    <div class="sc-num">场景 03 · 正在执行</div>
     <div class="sc-title">单据审查 · 关键信息提取比对</div>
-    <div class="sc-subtitle">合同/发票/付款单 · 本地化处理保障安全 · AI 自动提取比对</div>
+    <div class="sc-subtitle">单据类型多样 · 审单要点复杂 · 底层规则数量庞大</div>
   </summary>
   <div class="sc-detail">
-    <p><strong>流程：</strong>PDF 导入 → AI 提取关键字段 → 自动交叉比对 → 异常高亮 + 审查摘要</p>
-    <p><strong>效果：</strong>全程本地处理 · 数据安全可控 · 人工仅复核异常项 · 审查效率大幅提升</p>
+    <p><strong>流程：</strong>录入底层审查规则 → AI 自动提取关键字段 → 全量自动比对 → 人工仅复核重点项与异常项</p>
+    <p><strong>效果：</strong>全程本地处理 · 安全可控 · 审查覆盖率与效率同步提升 · 人工聚焦高价值判断</p>
   </div>
 </details>
 
@@ -270,7 +270,7 @@ title: AI工具使用报告
 
 <div class="section-header" id="recommendations">
   <span class="section-num">PART 04</span>
-  <h2>工具及模型使用感受</h2>
+  <h2>工具及模型使用建议</h2>
 </div>
 
 <div class="decision-table">
@@ -352,19 +352,13 @@ title: AI工具使用报告
 
 <div class="insight-card">
   <div class="insight-text">
-    <strong>AI 工具领域不存在"最强又最简单"的选项。</strong>Claude Code 能力最强但入门最陡，Codex 最友好但天花板明显。真正的效率提升，不在于选哪个工具，而在于<strong>是否愿意投入时间跨越学习曲线</strong>。
+    <strong>AI 时代下，我最突出的感受是——工具的意义被重新定义了。</strong>作为当前最先进的生产力工具，AI 极大压缩了"技术可行性"的考量空间。过去我们在构思一个方案时，需要花大量精力权衡技术实现的难度与概率；而现在，AI 帮我们跨越了这道门槛，让我们得以将更多时间投入到<strong>想法的打磨与创新</strong>上，最终输出更高质量的结果。一言以蔽之：<strong>想法，才是 AI 时代的真正宝藏。</strong>
   </div>
 </div>
 
 <div class="insight-card">
   <div class="insight-text">
-    <strong>模型选择的核心原则是"够用就好"。</strong>DeepSeek V4 Pro 覆盖 80% 日常需求，性价比优势巨大。评估模型不能只看性能指标，<strong>速度 · 质量 · Token 消耗</strong> 必须综合考量。
-  </div>
-</div>
-
-<div class="insight-card">
-  <div class="insight-text">
-    <strong>"AI 是锤子，关键是你知不知道钉子在哪。"</strong>三个场景的成功落地，前提不是 AI 有多强，而是对自身业务流程的痛点有足够深刻的理解。财务人员学 AI 不是转行做程序员，而是<strong>用技术武装专业，让判断力被放大</strong>。
+    <strong>"AI 是锤子，关键是你知不知道钉子在哪。"</strong>三个场景的成功落地，前提不是 AI 有多强，而是对自身业务流程的痛点有足够深刻的理解。在本次深度使用之后，我多次被 AI 展现出的能力与效率所震撼，也深刻意识到——<strong>对待 AI 的态度需要主动转变</strong>。拥抱并跟随这场效率革命，以更积极的姿态投入学习、跨越学习曲线，是每个财务人在 AI 时代的必修课。
   </div>
 </div>
 
