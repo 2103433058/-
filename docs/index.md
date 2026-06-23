@@ -219,41 +219,6 @@ title: AI工具使用报告
 
 </div>
 
-### 分层调用策略与成本考量
-
-<div class="decision-table">
-  <div class="dt-row dt-header">
-    <div class="dt-cell">场景</div>
-    <div class="dt-cell">推荐模型</div>
-    <div class="dt-cell">说明</div>
-  </div>
-  <div class="dt-row">
-    <div class="dt-cell dt-label">日常默认</div>
-    <div class="dt-cell dt-value">DeepSeek V4 Pro</div>
-    <div class="dt-cell dt-reason">高性价比，覆盖 80% 场景需求</div>
-  </div>
-  <div class="dt-row">
-    <div class="dt-cell dt-label">关键攻坚</div>
-    <div class="dt-cell dt-value">GLM 5.2</div>
-    <div class="dt-cell dt-reason">国产最强，复杂任务最优解</div>
-  </div>
-  <div class="dt-row">
-    <div class="dt-cell dt-label">编程专项</div>
-    <div class="dt-cell dt-value">Kimi 2.7</div>
-    <div class="dt-cell dt-reason">代码能力突出，实际业务场景效果好</div>
-  </div>
-  <div class="dt-row">
-    <div class="dt-cell dt-label">轻量响应</div>
-    <div class="dt-cell dt-value">Qwen 3.7 Max+</div>
-    <div class="dt-cell dt-reason">响应快，适合短平快任务</div>
-  </div>
-  <div class="dt-row">
-    <div class="dt-cell dt-label" style="color:#1a1a1a;font-weight:800;">成本提醒</div>
-    <div class="dt-cell dt-value" style="color:#1a1a1a;">速度 · 质量 · Token</div>
-    <div class="dt-cell dt-reason">模型评估须综合三维度，单一追求性能将产生不可忽视的隐性成本</div>
-  </div>
-</div>
-
 ---
 
 <div class="section-header" id="scenarios">
@@ -338,6 +303,11 @@ title: AI工具使用报告
     <div class="dt-cell dt-label">安全原则</div>
     <div class="dt-cell dt-value">本地执行优先</div>
     <div class="dt-cell dt-reason">敏感数据不出境</div>
+  </div>
+  <div class="dt-row">
+    <div class="dt-cell dt-label" style="color:#1a1a1a;font-weight:800;">成本提醒</div>
+    <div class="dt-cell dt-value" style="color:#1a1a1a;">速度 · 质量 · Token</div>
+    <div class="dt-cell dt-reason">模型评估须综合三维度，单一追求性能将产生不可忽视的隐性成本</div>
   </div>
 </div>
 
