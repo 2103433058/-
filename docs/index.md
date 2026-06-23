@@ -311,46 +311,37 @@ title: AI工具使用报告
   <h2>关键建议</h2>
 </div>
 
-<div class="roadmap">
-  <div class="rm-step">
-    <div class="rm-num">01</div>
-    <div class="rm-title">试点验证</div>
-    <div class="rm-desc">资金组先跑通<br>沉淀工作流模板</div>
+<div class="decision-table">
+  <div class="dt-row dt-header">
+    <div class="dt-cell">维度</div>
+    <div class="dt-cell">决策</div>
+    <div class="dt-cell">理由</div>
   </div>
-  <div class="rm-step">
-    <div class="rm-num">02</div>
-    <div class="rm-title">双轨配置</div>
-    <div class="rm-desc">Claude Code 深度使用<br>+ Qoderwork 团队普及</div>
+  <div class="dt-row">
+    <div class="dt-cell dt-label">日常模型</div>
+    <div class="dt-cell dt-value">DeepSeek V4 Pro</div>
+    <div class="dt-cell dt-reason">高性价比，覆盖 80% 场景</div>
   </div>
-  <div class="rm-step">
-    <div class="rm-num">03</div>
-    <div class="rm-title">实操培训</div>
-    <div class="rm-desc">2-3 次内部培训<br>聚焦"上班就能用"</div>
+  <div class="dt-row">
+    <div class="dt-cell dt-label">关键攻坚</div>
+    <div class="dt-cell dt-value">GLM 5.2</div>
+    <div class="dt-cell dt-reason">国产最强，复杂任务最优解</div>
   </div>
-  <div class="rm-step">
-    <div class="rm-num">04</div>
-    <div class="rm-title">效果追踪</div>
-    <div class="rm-desc">季度评估模型数据<br>动态调整策略</div>
+  <div class="dt-row">
+    <div class="dt-cell dt-label">深度工具</div>
+    <div class="dt-cell dt-value">Claude Code</div>
+    <div class="dt-cell dt-reason">能力最强，技术骨干首选</div>
   </div>
-  <div class="rm-step">
-    <div class="rm-num">05</div>
-    <div class="rm-title">安全基线</div>
-    <div class="rm-desc">明确数据边界<br>定期权限审查</div>
+  <div class="dt-row">
+    <div class="dt-cell dt-label">团队工具</div>
+    <div class="dt-cell dt-value">Qoderwork</div>
+    <div class="dt-cell dt-reason">低门槛，适合推广普及</div>
   </div>
-</div>
-
-### 决策速查
-
-<div class="vtable-wrap">
-
-| 维度 | 决策 | 理由 |
-|------|------|------|
-| **日常模型** | <span class="badge">DeepSeek V4 Pro</span> | 高性价比，覆盖 80% 场景 |
-| **关键攻坚** | <span class="badge">GLM 5.2</span> | 国产最强，复杂任务最优解 |
-| **深度工具** | <span class="badge">Claude Code</span> | 能力最强，技术骨干首选 |
-| **团队工具** | <span class="badge">Qoderwork</span> | 低门槛，适合推广普及 |
-| **安全原则** | <span class="badge">本地执行优先</span> | 敏感数据不出境 |
-
+  <div class="dt-row">
+    <div class="dt-cell dt-label">安全原则</div>
+    <div class="dt-cell dt-value">本地执行优先</div>
+    <div class="dt-cell dt-reason">敏感数据不出境</div>
+  </div>
 </div>
 
 ---
