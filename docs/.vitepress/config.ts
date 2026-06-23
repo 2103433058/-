@@ -4,7 +4,7 @@ export default defineConfig({
   lang: 'zh-CN',
   title: 'AI工具使用报告',
   description: 'AI编程工具与模型在企业财务场景中的运用实践',
-  base: '/ai-tools-report/',
+  base: '/-/',
 
   themeConfig: {
     nav: [
