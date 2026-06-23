@@ -1,0 +1,14 @@
+{
+  "name": "ai-tools-report",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "AI工具使用报告 - 财务资金管理场景",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.5.0"
+  }
+}
